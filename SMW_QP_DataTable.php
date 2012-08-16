@@ -21,11 +21,8 @@ class SMWDataTable extends SMWTableResultPrinter {
 	public function getResultText( SMWQueryResult $res, $outputmode) {
 		global $wgOut;
 		$wgOut->addModules( 'ext.smw.datatables.core' );
-		$html = DOMDocument::loadHTML(parent::getResultText($res, SMW_OUTPUT_HTML));
-		$finder = new DOMXPath( $html );
-		foreach( $finder->query('//table') as $table ) {
-			$table->setAttribute( 'class', 'dataTable' );
-		}
-		return $html->saveHTML();
+		$this->params['class'] = $this->params['class'] . ' dataTable';
+		$this->params['headers'] = 'show';
+		return parent::getResultText($res, SMW_OUTPUT_HTML );
 	}
 }
