@@ -1,12 +1,28 @@
 == DataTables Semantic MediaWiki Result Format ==
 
-A Semantic MediaWiki result format implementation of the DataTables jQuery plugin.
+A Semantic MediaWiki result format implementation of the DataTables jQuery plugin.  Using the format 'datatable', the result format will print a [http://www.datatables.net/release-datatables/examples/basic_init/zero_config.html zero-config DataTables table]. 
 
 === Tested configuration ===
 * MediaWiki 1.18.2
 * PHP 5.3.10
 * MySQL 5.5.21
 * Semantic MediaWiki v1.8a
+
+=== Installation ===
+This result format adds the DataTables plugin as a git submodule.  As such, you will need to perform a recursive clone or for older git versions, init and update submodules manually.
+
+<code>
+git clone --recursive https://github.com/mtyeh411/semantic_mediawiki-datatables.git
+</code>
+
+or
+
+<code>
+git clone https://github.com/mtyeh411/semantic_mediawiki-datatables.git
+cd semantic_mediawiki-datatables
+git submodule update --init
+</code>
+
 
 === Configuration ===
 <code>
