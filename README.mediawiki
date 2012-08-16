@@ -19,7 +19,11 @@ or
 
 <code>
 git clone https://github.com/mtyeh411/semantic_mediawiki-datatables.git
+</code>
+<code>
 cd semantic_mediawiki-datatables
+</code>
+<code>
 git submodule update --init
 </code>
 
