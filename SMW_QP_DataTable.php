@@ -23,6 +23,7 @@ class SMWDataTable extends SMWTableResultPrinter {
 		$wgOut->addModules( 'ext.smw.datatables.core' );
 		$this->params['class'] = $this->params['class'] . ' dataTable';
 		$this->params['headers'] = 'show';
+		$this->params['searchlabel'] = '';
 		return parent::getResultText($res, SMW_OUTPUT_HTML );
 	}
 }
